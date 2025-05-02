@@ -4,9 +4,9 @@
 
 Integrantes del equipo:
 
-Legajo: 52781 - Damián Agustin Darelli - agu2darelli@gmail.com / Damian.Darelli@alu.frt.utn.edu.ar
-Legajo: 53552 - Bruno Thomas Vilariño - bruno.vilarino@alu.frt.utn.edu.ar
-Legajo: 56429 - Sergio Lautaro Molina Palacios - Sergio.MolinaPalacios@alu.frt.utn.edu.ar
+-Legajo: 52781 - Damián Agustin Darelli - agu2darelli@gmail.com / Damian.Darelli@alu.frt.utn.edu.ar
+-Legajo: 53552 - Bruno Thomas Vilariño - bruno.vilarino@alu.frt.utn.edu.ar
+-Legajo: 56429 - Sergio Lautaro Molina Palacios - Sergio.MolinaPalacios@alu.frt.utn.edu.ar
 
 1. Realizar una bifurcación (fork) del [repositorio](https://github.com/ing-software-frt-utn/dsw2025ej8)
 2. Crear una rama de larga duración development
