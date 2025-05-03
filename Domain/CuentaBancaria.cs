@@ -20,64 +20,28 @@ public class CuentaBancaria
         _titulares = titulares;
     }
     #region Getters/Setters
-    public string GetNumero()
-    {
-        return _numero;
-    }
+    public string GetNumero() => _numero;
 
-    public decimal GetSaldo()
-    {
-        return _saldo;
-    }
-    public TipoCuenta GetTipo()
-    {
-        return _tipo;
-    }
+    public decimal GetSaldo() => _saldo;
+    public TipoCuenta GetTipo() => _tipo;
 
-    public Estado GetEstado()
-    {
-        return _estado;
-    }
+    public Estado GetEstado() => _estado;
 
-    public void SetEstado(Estado estado)
-    {
-        _estado = estado;
-    }
+    public void SetEstado(Estado estado) => _estado = estado;
 
-    public decimal GetTasaDeInteres()
-    {
-        return _tasaDeInteres;
-    }
+    public decimal GetTasaDeInteres() => _tasaDeInteres;
 
-    public void SetTasaDeInteres(decimal tasaDeInteres)
-    {
-        _tasaDeInteres = tasaDeInteres;
-    }
+    public void SetTasaDeInteres(decimal tasaDeInteres) => _tasaDeInteres = tasaDeInteres;
 
-    public decimal GetLimiteDeDescubierto()
-    {
-        return _limiteDeDescubierto;
-    }
+    public decimal GetLimiteDeDescubierto() => _limiteDeDescubierto;
 
-    public void SetLimiteDeDescubierto(decimal limiteDeDescubierto)
-    {
-        _limiteDeDescubierto = limiteDeDescubierto;
-    }
+    public void SetLimiteDeDescubierto(decimal limiteDeDescubierto) => _limiteDeDescubierto = limiteDeDescubierto;
 
-    public decimal GetComision()
-    {
-        return _comision;
-    }
+    public decimal GetComision() => _comision;
 
-    public void SetComision(decimal comision)
-    {
-        _comision = comision;
-    }
+    public void SetComision(decimal comision) => _comision = comision;
 
-    public string[] GetTitulares()
-    {
-        return _titulares;
-    }
+    public string[] GetTitulares() => _titulares;
     #endregion
 
     public void Depositar(decimal monto)
