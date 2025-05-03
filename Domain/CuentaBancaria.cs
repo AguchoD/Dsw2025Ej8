@@ -1,50 +1,41 @@
-﻿namespace Dsw2025Ej8.Domain;
+﻿using System.Security.Cryptography.X509Certificates;
 
-public class CuentaBancaria
+namespace Dsw2025Ej8.Domain;
+
+public abstract class CuentaBancaria
 {
-    private TipoCuenta _tipo;
-    private string _numero;
-    private decimal _saldo;
-    private Estado _estado;
-    private decimal _tasaDeInteres;
-    private decimal _limiteDeDescubierto;
-    private decimal _comision;
-    private string[] _titulares;
+    public int _numero { get; }
+    public decimal _saldo { get; protected set; }
+    public bool _estado { get; protected set; } = true;
+    string Tipo { get; set; }
 
-    public CuentaBancaria(string numero, decimal saldo, TipoCuenta tipo, string[] titulares)
+
+    protected CuentaBancaria(int numero, decimal saldo)
     {
         _numero = numero;
         _saldo = saldo;
-        _tipo = tipo;
-        _estado = Estado.Activa;
-        _titulares = titulares;
     }
-    #region Getters/Setters
-    public string GetNumero() => _numero;
+     
 
-    public decimal GetSaldo() => _saldo;
-    public TipoCuenta GetTipo() => _tipo;
+    public void validarMonto(decimal monto)
+    {
+        if (monto <= 0)
+        {
+            throw new MontoNoValidoException();
+        }
+    }
+    public void validarEstado()
+    {
+        if (!_estado)
+        {
+            throw new CuentaNoActivaException("suspendida");
+        }
+    }
+    public abstract void depositar(decimal monto);
+    public abstract void retiro(decimal monto);
+}
 
-    public Estado GetEstado() => _estado;
-
-    public void SetEstado(Estado estado) => _estado = estado;
-
-    public decimal GetTasaDeInteres() => _tasaDeInteres;
-
-    public void SetTasaDeInteres(decimal tasaDeInteres) => _tasaDeInteres = tasaDeInteres;
-
-    public decimal GetLimiteDeDescubierto() => _limiteDeDescubierto;
-
-    public void SetLimiteDeDescubierto(decimal limiteDeDescubierto) => _limiteDeDescubierto = limiteDeDescubierto;
-
-    public decimal GetComision() => _comision;
-
-    public void SetComision(decimal comision) => _comision = comision;
-
-    public string[] GetTitulares() => _titulares;
-    #endregion
-
-    public void Depositar(decimal monto)
+    /*public void Depositar(decimal monto)
     {
         if (_tipo == TipoCuenta.CajaDeAhorro)
         {
@@ -84,3 +75,4 @@ public class CuentaBancaria
         }
     }
 }
+    */
